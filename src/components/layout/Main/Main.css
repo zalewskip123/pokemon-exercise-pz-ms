@@ -1,0 +1,22 @@
+.Main {
+    height: 93vh;
+    width: 100%;
+}
+
+.sidebar {
+    float: left;
+    height: 100%;
+    width: 5%;
+    background-color: #1fb2aa;
+}
+
+.maindiv {
+    float: left;
+    height: 100%;
+    width: 90%;
+    background-color: whitesmoke;
+    position: relative;
+    -webkit-box-shadow: 0px 20px 29px 18px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 20px 29px 18px rgba(0, 0, 0, 1);
+    box-shadow: 0px 20px 29px 18px rgba(0, 0, 0, 1);
+}
