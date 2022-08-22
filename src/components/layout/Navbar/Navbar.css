@@ -1,8 +1,8 @@
 .Navbar {
-    height: 7vh;
+    height: 10vh;
     width: 100%;
     background-color: #4040a1;
-    -webkit-box-shadow: inset 0px -18px 29px 0px rgba(38, 118, 228, 1);
-    -moz-box-shadow: inset 0px -18px 29px 0px rgba(38, 118, 228, 1);
-    box-shadow: inset 0px -18px 29px 0px rgba(38, 118, 228, 1);
+    -webkit-box-shadow: inset 0px -18px 24px 0px rgba(31, 178, 170, 1);
+    -moz-box-shadow: inset 0px -18px 24px 0px rgba(31, 178, 170, 1);
+    box-shadow: inset 0px -18px 24px 0px rgba(31, 178, 170, 1);
 }
