@@ -8,7 +8,7 @@ const PokemonList = () => {
     const [prev, setPrev] = useState(null);
 
     useEffect(() => {
-        const URL = `https://pokeapi.co/api/v2/pokedex/`;
+        const URL = `https://pokeapi.co/api/v2/pokemon/`;
         fetch(URL)
             .then(response => {
                 if(response.ok) {
