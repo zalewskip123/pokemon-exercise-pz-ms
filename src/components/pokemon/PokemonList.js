@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-//import Result from "./PokemonResult";
-//import Button from "../button/Button";
+import Result from "./PokemonResult";
 
 const PokemonList = () => {
     const [result, setResult] = useState(undefined);
@@ -20,13 +19,22 @@ const PokemonList = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
+                setResult(data.results);
+                setNext(data.next);
+                setPrev(data.prev);
+                setErr(false);
             })
             .catch(err => {
                 console.log(err);
+                setErr(true);
             })
-    }, [next, prev])
+    }, [])
 
-    return <p>test</p>
+    return(
+        <>
+            <Result result={result} next={next} prev={prev} error={err}/>
+        </>
+    )
 }
 
 export default PokemonList;

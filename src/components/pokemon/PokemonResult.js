@@ -1,15 +1,19 @@
 import React from "react";
 
 const Result = (props) => {
-    const {result, next, prev, err} = props.pokemons;
+    const {result, next, prev, err} = props;
     
     let content = null;
 
-    if (!err && next) {
+    if (!err && result != null) {
+        let i = 0;
         content = (
-            <div>
-                {console.log(result, prev)}
-            </div>
+            result.map(({name, url}) => (
+                <div key={i++}>
+                    <p key={i++}>{name}</p>
+                    <p key={i++}>{url}</p>
+                </div>
+            ))
         )
     }
     
