@@ -8,7 +8,7 @@ function Navbar() {
       <div>
         <h3> By Mikołaj Studencki and Piotr Zalewski </h3>
       </div>
-        <div classname= "pages">
+        <div className= "pages">
           <a href="/">PokeDex</a>
           <a href="/ulubione">Ulubione</a>
         </div>
