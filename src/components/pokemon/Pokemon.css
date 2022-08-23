@@ -1,0 +1,16 @@
+.pokemonsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 4vw;
+    grid-row-gap: 4vh;
+    margin: 5vh 3vw 0 3vw;
+}
+
+.pokemonsGridItem {
+    background-color: rgba(187, 26, 26, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 16vh;
+    width: auto;
+    font-size: 30px;
+    text-align: center;
+}

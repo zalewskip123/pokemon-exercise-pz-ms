@@ -1,4 +1,5 @@
 import React from "react";
+import "./Pokemon.css";
 
 const Result = (props) => {
     const {result, next, prev, err} = props;
@@ -6,14 +7,15 @@ const Result = (props) => {
     let content = null;
 
     if (!err && result != null) {
-        let i = 0;
+        let id = 0;
         content = (
-            result.map(({name, url}) => (
-                <div key={i++}>
-                    <p key={i++}>{name}</p>
-                    <p key={i++}>{url}</p>
-                </div>
-            ))
+            <div className="pokemonsGrid">
+                {result.map(({name, url}) => (
+                    <div className="pokemonsGridItem" key={id++}>
+                        <p>{name}</p>
+                    </div>
+                ))}
+            </div>
         )
     }
     
