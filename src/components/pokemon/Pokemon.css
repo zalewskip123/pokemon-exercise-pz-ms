@@ -63,6 +63,16 @@
     max-width: 85%;
 }
 
+@media (max-height: 750px) {
+    .PokemonDetails img {
+        height: 8vh;
+    }
+
+    .headerGridItem p {
+        padding-top: unset;
+    }
+}
+
 @font-face {
     font-family: "GameBoy";
     src: local("GameBoyFont"),
