@@ -1,19 +1,32 @@
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
 import Navbar from "./components/layout/Navbar/NavBar";
 import Main from "./components/layout/Main/Main";
 import PokemonList from "./components/pokemon/PokemonList";
+import Ulubione from "./components/layout/Ulubione/Ulubione";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Main>
-        <PokemonList />
-      </Main>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <Main>
+                <PokemonList />
+              </Main>
+            </Route>
+            <Route path="/Ulubione">
+              <Ulubione />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
