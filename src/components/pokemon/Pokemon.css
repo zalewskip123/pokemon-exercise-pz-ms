@@ -1,15 +1,15 @@
 .pokemonsGrid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 2.5vw;
+    grid-column-gap: 3vw;
     grid-row-gap: 4vh;
-    margin: 5vh 3vw 0 3vw;
+    margin: 4vh 3vw 0 3vw;
 }
 
 .pokemonsGridItem {
     background-color: Azure;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 16vh;
+    height: 17vh;
     width: auto;
     font-size: 30px;
     text-align: center;
@@ -25,8 +25,60 @@
 }
 
 .headerGridItem p {
+    float: left;
     text-align: left;
     margin-left: 0.5vw;
     padding-top: 0.4vh;
     font-size: 85%;
+    width: 75%;
+}
+
+.imagesPokemon {
+    float: left;
+}
+
+.image1 {
+    text-align: right;
+    position: absolute;
+    height: 2.8vh;
+    padding-left: 0.4vw;
+    margin-top: 0.37vh;
+}
+
+.image2 {
+    position: absolute;
+    height: 3.8vh;
+    padding-bottom: 0.3vh;
+    opacity: 0;
+    cursor: auto;
+}
+
+.image2:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.PokemonDetails img {
+    height: 9vh;
+    max-width: 85%;
+}
+
+@font-face {
+    font-family: "GameBoy";
+    src: local("GameBoyFont"),
+    url("../../fonts/Early GameBoy.ttf") format("truetype");
+}
+
+.PokemonDetails {
+    cursor: auto;
+}
+
+.PokemonDetails:hover {
+    cursor: pointer;
+}
+
+.PokemonDetails p {
+    font-size: 60%;
+    font-weight: 1000;
+    font-family: "GameBoy";
 }
