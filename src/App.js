@@ -20,7 +20,7 @@ function App() {
                 <PokemonList />
               </Main>
             </Route>
-            <Route path="/Ulubione">
+            <Route path="/ulubione">
               <Ulubione />
             </Route>
           </Switch>
