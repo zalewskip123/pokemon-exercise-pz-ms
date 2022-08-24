@@ -12,7 +12,7 @@ function Navbar() {
       </div>
         <div className= "pages">
           <Link to="/">PokeDex</Link>
-          <Link to="/Ulubione">Ulubione</Link>
+          <Link to="/ulubione">Ulubione</Link>
         </div>
       </div>
   );
