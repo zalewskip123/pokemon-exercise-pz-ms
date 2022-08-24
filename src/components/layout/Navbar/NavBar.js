@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -9,8 +11,8 @@ function Navbar() {
         <h3> By Mikołaj Studencki and Piotr Zalewski </h3>
       </div>
         <div className= "pages">
-          <a href="/">PokeDex</a>
-          <a href="/ulubione">Ulubione</a>
+          <Link to="/">PokeDex</Link>
+          <Link to="/Ulubione">Ulubione</Link>
         </div>
       </div>
   );
