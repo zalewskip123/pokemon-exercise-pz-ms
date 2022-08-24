@@ -12,6 +12,9 @@ const Result = (props) => {
             <div className="pokemonsGrid">
                 {result.map(({name, url}) => (
                     <div className="pokemonsGridItem" key={id++}>
+                        <div className="headerGridItem">
+                            <p>{id}</p>
+                        </div>
                         <p>{name}</p>
                     </div>
                 ))}
