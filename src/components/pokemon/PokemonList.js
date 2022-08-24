@@ -18,7 +18,6 @@ const PokemonList = () => {
             })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 setResult(data.results);
                 setNext(data.next);
                 setPrev(data.prev);
