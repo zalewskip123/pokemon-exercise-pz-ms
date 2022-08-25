@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PokemonDetails from "./PokemonDetails";
-import Ulubione from "../layout/Ulubione/Ulubione";
 import "./Pokemon.css";
 import "./Button.css";
 
@@ -29,8 +28,9 @@ const Result = (props) => {
     const FavouritePoke = (id) => {
         if (!idFP.includes(id)) setIdFP(currentArray => [...currentArray, id]);
         else setIdFP(currentArray => currentArray.filter(currentElement => currentElement !== id));
+        props.setDataRed(idFP);
         var element = document.querySelectorAll(".imageId"+(id));
-        for (let i=0; i <= element.length; i++) {
+        for (let i=0; i < element.length; i++) {
             if (!idFP.includes(id)) element[i].classList.add("active");
             else element[i].classList.remove("active");
         }

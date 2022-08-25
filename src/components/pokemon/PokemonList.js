@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Result from "./PokemonResult";
 
-const PokemonList = () => {
+const PokemonList = (props) => {
     const [result, setResult] = useState(undefined);
     const [err, setErr] = useState(false);
+
+    const [dataRed, setDataRed] = useState();
+
+    const ReadDataToApp = (dataRed) => {
+        props.setDataRed2(dataRed);
+    }
+
+    useEffect(() => {
+        ReadDataToApp(dataRed)
+    })
 
     useEffect(() => {
         const URL = `https://pokeapi.co/api/v2/pokemon/?limit=898`;
@@ -27,7 +37,7 @@ const PokemonList = () => {
 
     return(
         <>
-            <Result result={result} error={err}/>
+            <Result result={result} error={err} setDataRed={setDataRed}/>
         </>
     )
 }
