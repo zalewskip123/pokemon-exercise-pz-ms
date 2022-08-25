@@ -4,11 +4,9 @@ import Result from "./PokemonResult";
 const PokemonList = () => {
     const [result, setResult] = useState(undefined);
     const [err, setErr] = useState(false);
-    const [next, setNext] = useState(null);
-    const [prev, setPrev] = useState(null);
 
     useEffect(() => {
-        const URL = `https://pokeapi.co/api/v2/pokemon/`;
+        const URL = `https://pokeapi.co/api/v2/pokemon/?limit=898`;
         fetch(URL)
             .then(response => {
                 if(response.ok) {
@@ -19,8 +17,6 @@ const PokemonList = () => {
             .then(response => response.json())
             .then(data => {
                 setResult(data.results);
-                setNext(data.next);
-                setPrev(data.prev);
                 setErr(false);
             })
             .catch(err => {
@@ -31,7 +27,7 @@ const PokemonList = () => {
 
     return(
         <>
-            <Result result={result} next={next} prev={prev} error={err}/>
+            <Result result={result} error={err}/>
         </>
     )
 }

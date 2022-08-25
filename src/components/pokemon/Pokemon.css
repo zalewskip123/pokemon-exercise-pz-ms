@@ -53,6 +53,10 @@
     cursor: auto;
 }
 
+.image2.active {
+    opacity: 1;
+}
+
 .image2:hover {
     opacity: 1;
     cursor: pointer;

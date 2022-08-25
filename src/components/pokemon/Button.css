@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "GameBoy";
+    src: local("GameBoyFont"),
+    url("../../fonts/Early GameBoy.ttf") format("truetype");
+}
+
+.button {
+    background-color: azure;
+    color: black;
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+}
+
+.buttonText {
+    font-family: "GameBoy";
+    font-size: 0.9em;
+    text-align: center;
+    padding-left: 8%;
+}
+
+.next {
+
+}
+
+.prev {
+
+}
