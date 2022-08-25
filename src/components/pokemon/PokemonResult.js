@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PokemonDetails from "./PokemonDetails";
-import Ulubione from "../layout/Ulubione/Ulubione";
+import { Link } from "react-router-dom";
 import "./Pokemon.css";
 import "./Button.css";
 
