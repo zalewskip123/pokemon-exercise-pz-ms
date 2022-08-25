@@ -10,6 +10,14 @@
     width: 4vw;
     height: 8vh;
     border-radius: 50%;
+    position: absolute;
+}
+
+.button:hover {
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 1);
+    cursor: pointer;
 }
 
 .buttonText {
@@ -20,9 +28,11 @@
 }
 
 .next {
-
+    left: 89.5vw;
+    bottom: 3vh;
 }
 
 .prev {
-
+    right: 89.7vw;
+    bottom: 3vh;
 }

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 3vw;
     grid-row-gap: 4vh;
-    margin: 4vh 3vw 0 3vw;
+    margin: 1vh 3vw 0 3vw;
 }
 
 .pokemonsGridItem {
