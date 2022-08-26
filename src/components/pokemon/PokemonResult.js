@@ -4,6 +4,7 @@ import "./Pokemon.css";
 import "./Button.css";
 
 const Result = (props) => {
+    if (JSON.parse(localStorage.getItem("idFP")) === null) localStorage.setItem("idFP",JSON.stringify([]))
     const {result, err} = props;
     const [idFP, setIdFP] = useState(JSON.parse(localStorage.getItem("idFP")));
     const [number, setNumber] = useState(0);
