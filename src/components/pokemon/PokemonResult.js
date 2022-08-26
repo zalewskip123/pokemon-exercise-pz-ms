@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PokemonDetails from "./PokemonDetails";
-import { Link } from "react-router-dom";
 import "./Pokemon.css";
 import "./Button.css";
 

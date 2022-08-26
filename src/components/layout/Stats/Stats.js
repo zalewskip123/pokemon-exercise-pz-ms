@@ -1,12 +1,19 @@
 import React from "react";
-import "./Stast.css";
+import { useParams } from "react-router-dom";
+import "./Stats.css";
 
-function Stats({children}) {
+const Stats = ({children}) => {
+
+  const {id} = useParams();
+
   return (
-    <main className="stats">
+    <main className="Stats">
       <div className="sidebar" />
       <div className="statsdiv">{ children }</div>
       <div className="sidebar" />
+      <div>
+        <h1> staty = {id}</h1>
+      </div>
     </main>
   );
 }

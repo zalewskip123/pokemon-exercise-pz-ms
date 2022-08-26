@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Pokemon.css";
 
 const PokemonDetails = (props) => {
@@ -8,8 +10,10 @@ const PokemonDetails = (props) => {
 
     return (
         <div className="PokemonDetails">
-            <img src={ImageURL} alt="Pokemonimage"/>
-            <p>{name}</p>
+            <Link to={`/stats/${id}`}>
+                <img src={ImageURL} alt="Pokemonimage"/>
+                <p>{name}</p>
+            </Link>
         </div>
     )
 }

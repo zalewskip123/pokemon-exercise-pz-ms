@@ -92,7 +92,12 @@
 }
 
 .PokemonDetails p {
+    color: black;
     font-size: 45%;
     font-weight: 1000;
     font-family: "GameBoy";
+}
+
+.PokemonDetails a {
+    text-decoration: none;
 }

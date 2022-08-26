@@ -1,4 +1,4 @@
-.stats {
+.Stats {
     height: 86vh;
     width: 100%;
 }
@@ -10,7 +10,7 @@
     background-color: #12a4d4;
 }
 
-.statsnediv {
+.statsdiv {
     float: left;
     height: 100%;
     width: 90%;
