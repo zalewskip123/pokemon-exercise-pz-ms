@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PokemonDetails from "./PokemonDetails";
 import "./Pokemon.css";
-import "./Button.css";
 
 const Result = (props) => {
     if (JSON.parse(localStorage.getItem("idFP")) === null) localStorage.setItem("idFP",JSON.stringify([]));
@@ -10,24 +9,8 @@ const Result = (props) => {
     const {result, err} = props;
     const [idFP, setIdFP] = useState(JSON.parse(localStorage.getItem("idFP")));
     const [namePokemon, setNamePokemon] = useState(JSON.parse(localStorage.getItem("pokename")));
-    const [number, setNumber] = useState(0);
     
     let content = null;
-
-    const nextButton = () => {
-        if(number < 44) {
-            setNumber(number + 1);
-        }
-    };
-
-    const prevButton = () => {
-        if(number > 0){
-            setNumber(number - 1);
-        }
-        else{
-            setNumber(number);
-        }
-    };
 
     const FavouritePoke = (id, name) => {
         if (!idFP.includes(id)) setIdFP(currentArray => [...currentArray, id]);
@@ -37,31 +20,20 @@ const Result = (props) => {
     }
 
     if (!err && result != null) {
-        const resultPart = result.slice(number * 20, (number + 1) * 20);
         content = (
             <div className="pokemonsGrid">
-                {resultPart.map(({name}, index) => (
-                    <div className="pokemonsGridItem" key={index + (number * 20)}>
+                {result.map(({name}, index) => (
+                    <div className="pokemonsGridItem" key={index + (props.number * 20)}>
                         <div className="headerGridItem">
-                            <p>{index + 1 + (number * 20)}</p>
+                            <p>{index + 1 + (props.number * 20)}</p>
                             <div className="imagesPokemon">
                                 <img className="image1" src={require("../../images/favourite/115793_star_icon.png")} alt="Favouriteimage"/>
-                                <img className={!idFP.includes(index + 1 + ((number) * 20)) ? `image2 ${"imageId"+(index + 1)}` : `image2 ${"imageId"+(index + 1)} active`} onClick={() => {FavouritePoke(index + 1 + ((number) * 20), name)}} src={require("../../images/favourite/285661_star_icon.png")} alt="Favouriteimage"/>
+                                <img className={!idFP.includes(index + 1 + ((props.number) * 20)) ? `image2 ${"imageId"+(index + 1)}` : `image2 ${"imageId"+(index + 1)} active`} onClick={() => {FavouritePoke(index + 1 + ((props.number) * 20), name)}} src={require("../../images/favourite/285661_star_icon.png")} alt="Favouriteimage"/>
                             </div>
                         </div>
-                        <PokemonDetails name={name} id={index + 1 + (number * 20)}/>
+                        <PokemonDetails name={name} id={index + 1 + (props.number * 20)}/>
                     </div>
                 ))}
-                <div>
-                    <button className="button prev" onClick={prevButton}>
-                        <p className="buttonText">Prev</p>
-                    </button>
-                </div>
-                <div>
-                    <button className="button next" onClick={nextButton}>
-                        <p className="buttonText">Next</p>
-                    </button>
-                </div>
             </div>
         )
     }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Pokemon.css";
@@ -6,12 +6,20 @@ import "./Pokemon.css";
 const PokemonDetails = (props) => {
     const {name, id} = props;
 
-    const ImageURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+    const [ImageURL, setImageURL] = useState(null)
+
+    fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`)
+        .then(response => {
+            if(response.ok) {
+                setImageURL(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`);
+            }
+        })
+        .catch({})
 
     return (
         <div className="PokemonDetails">
             <Link to={`/stats/${id}`}>
-                <img src={ImageURL} alt="Pokemonimage"/>
+                <img src={ImageURL !== null ? ImageURL : require("../../images/ball.png")} alt="Pokemonimage"/>
                 <p>{name}</p>
             </Link>
         </div>
