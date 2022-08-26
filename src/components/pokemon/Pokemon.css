@@ -3,7 +3,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 3vw;
     grid-row-gap: 4vh;
-    margin: 4vh 3vw 0 3vw;
+    margin: 1vh 3vw 0 3vw;
 }
 
 .pokemonsGridItem {
@@ -92,7 +92,12 @@
 }
 
 .PokemonDetails p {
-    font-size: 60%;
+    color: black;
+    font-size: 45%;
     font-weight: 1000;
     font-family: "GameBoy";
+}
+
+.PokemonDetails a {
+    text-decoration: none;
 }

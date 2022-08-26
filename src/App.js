@@ -7,6 +7,7 @@ import Navbar from "./components/layout/Navbar/NavBar";
 import Main from "./components/layout/Main/Main";
 import PokemonList from "./components/pokemon/PokemonList";
 import Ulubione from "./components/layout/Ulubione/Ulubione";
+import Stats from "./components/layout/Stats/Stats";
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path="/ulubione">
               <Ulubione/>
+            </Route>
+            <Route path="/stats/:id">
+              <Stats />
             </Route>
           </Switch>
         </div>

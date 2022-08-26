@@ -47,12 +47,12 @@ const Result = (props) => {
                     </div>
                 ))}
                 <div>
-                    <button className="button" onClick={prevButton}>
+                    <button className="button prev" onClick={prevButton}>
                         <p className="buttonText">Prev</p>
                     </button>
                 </div>
                 <div>
-                    <button className="button" onClick={nextButton}>
+                    <button className="button next" onClick={nextButton}>
                         <p className="buttonText">Next</p>
                     </button>
                 </div>
