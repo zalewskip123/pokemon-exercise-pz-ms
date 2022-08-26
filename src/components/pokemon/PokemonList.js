@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Result from "./PokemonResult";
 
-const PokemonList = () => {
+const PokemonList = (props) => {
     const [result, setResult] = useState(undefined);
     const [err, setErr] = useState(false);
 

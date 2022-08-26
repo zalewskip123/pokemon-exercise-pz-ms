@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import PokemonDetails from "./PokemonDetails";
-import Ulubione from "../layout/Ulubione/Ulubione";
 import "./Pokemon.css";
 import "./Button.css";
 
 const Result = (props) => {
     const {result, err} = props;
-    const [idFP, setIdFP] = useState([]);
+    const [idFP, setIdFP] = useState(JSON.parse(localStorage.getItem("idFP")));
     const [number, setNumber] = useState(0);
     
     let content = null;
@@ -22,18 +21,13 @@ const Result = (props) => {
             setNumber(number - 1);
         }
         else{
-            setIdFP(number);
+            setNumber(number);
         }
     };
 
     const FavouritePoke = (id) => {
         if (!idFP.includes(id)) setIdFP(currentArray => [...currentArray, id]);
         else setIdFP(currentArray => currentArray.filter(currentElement => currentElement !== id));
-        var element = document.querySelectorAll(".imageId"+(id));
-        for (let i=0; i <= element.length; i++) {
-            if (!idFP.includes(id)) element[i].classList.add("active");
-            else element[i].classList.remove("active");
-        }
     }
 
     if (!err && result != null) {
@@ -46,7 +40,7 @@ const Result = (props) => {
                             <p>{index + 1 + (number * 20)}</p>
                             <div className="imagesPokemon">
                                 <img className="image1" src={require("../../images/favourite/115793_star_icon.png")} alt="Favouriteimage"/>
-                                <img className={`image2 ${"imageId"+(index + 1)}`} onClick={() => {FavouritePoke(index + 1)}} src={require("../../images/favourite/285661_star_icon.png")} alt="Favouriteimage"/>
+                                <img className={!idFP.includes(index + 1 + ((number) * 20)) ? `image2 ${"imageId"+(index + 1)}` : `image2 ${"imageId"+(index + 1)} active`} onClick={() => {FavouritePoke(index + 1 + ((number) * 20))}} src={require("../../images/favourite/285661_star_icon.png")} alt="Favouriteimage"/>
                             </div>
                         </div>
                         <PokemonDetails name={name} id={index + 1 + (number * 20)}/>
@@ -65,9 +59,15 @@ const Result = (props) => {
             </div>
         )
     }
+
+    const setItemToLocalStorage = () => {
+        if (idFP.length !== 0) localStorage.setItem("idFP",JSON.stringify(idFP));
+        else localStorage.setItem("idFP",JSON.stringify([]))
+    }
     
     return (
         <div className="result">
+            {setItemToLocalStorage()}
             {err ? `Nie mamy w bazie pokemonów!` : content}
         </div>
     )
