@@ -6,7 +6,7 @@ const PokemonList = (props) => {
     const [err, setErr] = useState(false);
 
     useEffect(() => {
-        const URL = `https://pokeapi.co/api/v2/pokemon/?limit=898`;
+        const URL = `https://pokeapi.co/api/v2/pokemon`;
         fetch(URL)
             .then(response => {
                 if(response.ok) {
