@@ -9,11 +9,6 @@ import PokemonList from "./components/pokemon/PokemonList";
 import Ulubione from "./components/layout/Ulubione/Ulubione";
 
 function App() {
-  const [dataRed2, setDataRed2] = useState();
-
-  useEffect(() => {
-    console.log(dataRed2);
-  }, [dataRed2])
 
   return (
     <BrowserRouter>
@@ -23,11 +18,11 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Main>
-                <PokemonList setDataRed2={setDataRed2}/>
+                <PokemonList/>
               </Main>
             </Route>
             <Route path="/ulubione">
-              <Ulubione dataFv={dataRed2}/>
+              <Ulubione/>
             </Route>
           </Switch>
         </div>
