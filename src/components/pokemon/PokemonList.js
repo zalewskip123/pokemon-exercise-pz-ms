@@ -11,19 +11,23 @@ const PokemonList = () => {
     const [number, setNumber] = useState(0);
 
     const nextButton = () => {
-        if(number !== 44) {
-            if (number !== 43) setURL(next);
-            else setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=18");
-            setNumber(number + 1);
-        }
+        setTimeout(() => {
+            if(number !== 44) {
+                if (number !== 43) setURL(next);
+                else setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=18");
+                setNumber(number + 1);
+            }
+        },200);
     };
 
     const prevButton = () => {
-        if(prev !== null) {
-            if (number !== 44) setURL(prev);
-            else setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=20");
-            setNumber(number - 1);
-        }
+        setTimeout(() => {
+            if(prev !== null) {
+                if (number !== 44) setURL(prev);
+                else setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=20");
+                setNumber(number - 1);
+            }
+        },200);
     };
 
     useEffect(() => {

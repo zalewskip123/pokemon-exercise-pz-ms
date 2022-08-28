@@ -18,7 +18,7 @@ const PokemonDetails = (props) => {
 
     return (
         <div className="PokemonDetails">
-            <Link to={`/stats/${id}`}>
+            <Link to={`/stats/${name}`}>
                 <img src={ImageURL !== null ? ImageURL : require("../../images/ball.png")} alt="Pokemonimage"/>
                 <p>{name}</p>
             </Link>
