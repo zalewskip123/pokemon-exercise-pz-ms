@@ -23,7 +23,7 @@ function App() {
               </Main>
             </Route>
             <Route path="/ulubione">
-              <Ulubione/>
+              <Ulubione />
             </Route>
             <Route path="/stats/:id">
               <Stats />
