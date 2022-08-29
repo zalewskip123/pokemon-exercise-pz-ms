@@ -2,7 +2,7 @@ import React ,{ useEffect, useState }  from "react";
 import { useParams } from "react-router-dom";
 import "./Stats.css";
 
-//className={result.types.length === 2 ? "double" : "single"
+//className={result.types.length === 2 ? "double" : "single"}
 
 const Stats = () => {
 
@@ -10,6 +10,7 @@ const Stats = () => {
   const name = id;
 
   const [result, setResult] = useState(undefined);
+  const [ImageURL, setImageURL] = useState(null)
 
   const URL = `https://pokeapi.co/api/v2/pokemon/${name}`;
 
@@ -25,7 +26,6 @@ const Stats = () => {
         .then(data => {
           setResult(data);
           console.log(data);
-          console.log(data.types)
         })
         .catch(err => {
             console.log(err);
@@ -37,9 +37,9 @@ const Stats = () => {
       <div className="sidebar" />
         <div className="statsdiv">
           <div className="head">
-            <h1> {name} </h1>
+            <h1> {name}</h1>
             {result && result.types.map(({type}, index) => (
-                <h3 key={index}> {type.name} </h3>
+                <h3 key={index} className={result.types.length === 2 ? "double" : "single"}> {type.name} </h3>
             ))}
           </div>
         </div>
