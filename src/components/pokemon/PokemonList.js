@@ -17,17 +17,17 @@ const PokemonList = () => {
                 else setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=18");
                 setNumber(number + 1);
             }
-        },200);
+        }, 1000);
     };
 
     const prevButton = () => {
         setTimeout(() => {
             if(prev !== null) {
                 if (number !== 44) setURL(prev);
-                else setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=20");
+                else setURL("https://pokeapi.co/api/v2/pokemon/?offset=860&limit=20");
                 setNumber(number - 1);
             }
-        },200);
+        }, 1000);
     };
 
     useEffect(() => {

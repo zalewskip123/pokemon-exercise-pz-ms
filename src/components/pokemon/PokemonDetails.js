@@ -8,13 +8,15 @@ const PokemonDetails = (props) => {
 
     const [ImageURL, setImageURL] = useState(null)
 
-    fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`)
-        .then(response => {
-            if(response.ok) {
-                setImageURL(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`);
-            }
-        })
+    if (id !== 899 && id !== 900) {
+        fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`)
+            .then(response => {
+                if(response.ok) {
+                    setImageURL(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`);
+                }
+            })
         .catch({})
+    }
 
     return (
         <div className="PokemonDetails">
