@@ -8,22 +8,22 @@ const Stats = ({children}) => {
   const name = id;
 
   const URL = `https://pokeapi.co/api/v2/pokemon/${name}`;
-  const URL2 = `https://pokeapi.co/api/v2/pokemon-species/${name}`
 
   useEffect(() => {
     fetch(URL)
-    .then((response) => {
-      if(!response.ok) {
-        throw new Error(
-          "Error"
-        );
-      }
-      return response.json();
-    })
-    .then((dataResponse) => console.log(`This is data= ${dataResponse}`))
-    .catch((err) => {
-      console.log(err.mesage);
-    });
+        .then(response => {
+            if(response.ok) {
+                return response
+            }
+            throw Error("Nie udało się")
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }, [URL])
 
   return (
