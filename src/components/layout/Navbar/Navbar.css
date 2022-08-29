@@ -19,7 +19,7 @@
 
 .Navbar h3 {
     font-family: "GameBoy";
-    font-size: 1.7vh;
+    font-size: 1.7vmin;
     color: white;
     position: absolute;
     left: 12vw;
@@ -28,7 +28,7 @@
 
 .Navbar a {
     font-family: "GameBoy";
-    font-size: 200%;
+    font-size: 4.7vmin;
     text-decoration: none;
     margin-left: 9vw;
     color: white;
