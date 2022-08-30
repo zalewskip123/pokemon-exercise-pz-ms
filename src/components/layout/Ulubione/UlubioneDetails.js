@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import UlubioneStaticList from "./UlubioneStatsList";
 
 import "./UlubioneList.css";
 
@@ -26,14 +27,7 @@ const UlubioneDetails = (props) => {
                     <p>{name}</p>
                 </Link>
             </div>
-            <div className={`statsU`}>
-                <p>HP:</p>
-                <p>Attack:</p>
-                <p>Defense:</p>
-                <p>Speed:</p>
-                <p>Special attack:</p>
-                <p>Special defense:</p>
-            </div>
+            <UlubioneStaticList name={name} />
         </>
     )
 }

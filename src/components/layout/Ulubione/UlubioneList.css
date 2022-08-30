@@ -29,7 +29,7 @@
     text-align: left;
     margin-left: 0.5vw;
     padding-top: 0.4vh;
-    font-size: 85%;
+    font-size: 2.6vmin;
     width: 89.5%;
 }
 
@@ -89,36 +89,85 @@
     display: none;
     background-color: Azure;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 18.5vh;
+    height: 16.5vh;
     margin-left: 1.8vw;
     width: 21.5vw;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
+    z-index: 2;
+}
+
+.imgdiv {
+    width: 50%;
+}
+
+.statsU img {
+    float: left;
+    height: 5vh;
 }
 
 .statsU p {
     float: left;
-    padding-left: 1vh;
-    width: 100%;
     text-align: left;
-    padding-top: 0.1vh;
-    font-size: 80%;
+    padding-top: 0.3vh;
+    padding-left: 0.5vw;
+    font-size: 3vmin;
+    width: 20%;
+    height: 5vh;
 }
 
-.UlubioneDetails:hover + .statsU{
+.UlubioneDetails:hover + .statsUDiv .statsU{
     cursor: pointer;
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.statsUColumn {
+    width: 50%;
+    padding-top: 0.5vh;
+    padding-left: 0.5vh;
 }
 
 .UlubioneDetails p {
     color: black;
-    font-size: 70%;
+    font-size: 2vmin;
     font-weight: 1000;
     font-family: "GameBoy";
 }
 
 .UlubioneDetails a {
     text-decoration: none;
+}
+
+.StatsSum {
+    position: absolute;
+    background-color: rgb(196, 240, 240);
+    bottom: 0;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    width: 99.8%;
+    height: 15vh;
+    z-index: 1;
+}
+
+.nameStatsPU {
+    text-align: center;
+    color: black;
+    font-size: 3vmin;
+    font-weight: 1000;
+    font-family: "GameBoy";
+}
+
+.divGridSumStatsU {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1vh 0vw 0 13vw;
+}
+
+.gridcollumn p{
+    color: black;
+    font-size: 2vmin;
+    font-weight: 1000;
+    font-family: "GameBoy";
 }
 
