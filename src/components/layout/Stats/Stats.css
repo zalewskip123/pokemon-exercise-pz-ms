@@ -39,8 +39,13 @@
 
 .statsdiv h3 {
     font-family: "GameBoy";
-    font-size: 2vmin;
     text-align: center;
+    color: white;
+    font-size: 2vmin;
+    width: 12%;
+    border: 2px solid whitesmoke;
+    border-radius: 12px;
+    margin-left: 44%;
 }
 
 .single {
@@ -48,5 +53,29 @@
 }
 
 .double {
-    margin-top: 0.2vh;
+    margin-top: 0.05vh;
+}
+
+.statsdiv img {
+    height: 50vh;
+    width: 30%;
+}
+
+.statsdiv h2 {
+    font-family: "GameBoy";
+    text-align: center;
+    width: 30%;
+    font-size: 2vmin;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.statsdiv p {
+    margin-left: 3%;
+    font-family: "GameBoy";
+    font-size: 2vmin;
+    float: left;
+}
+
+.stats {
+    border-top: 2px solid black;
 }
