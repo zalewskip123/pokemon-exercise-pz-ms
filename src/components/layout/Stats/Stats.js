@@ -5,6 +5,12 @@ import "./ProgressBars.css";
 
 //className={result.types.length === 2 ? "double" : "single"}
 
+/*<div className="container">
+  <div className="filler" style={{width: `${HPStat}%`}}>
+    <span className="label">{`${result && result.stats[0].base_stat}`}</span>
+  </div>
+</div> */
+
 const Stats = () => {
 
   const {id} = useParams();
@@ -54,7 +60,22 @@ const Stats = () => {
 }, [URL])
 
 const ImageURL = result && result.sprites.front_default;
-const HPStat = result && result.stats[0].base_stat / 300 * 100;
+const HPStat = result && result.stats[0].base_stat;
+const ATStat = result && result.stats[1].base_stat;
+const DEFStat = result && result.stats[2].base_stat;
+const SPEStat = result && result.stats[5].base_stat;
+const SATStat = result && result.stats[3].base_stat;
+const SDEFStat = result && result.stats[4].base_stat;
+
+const Bar = (Stat) => {
+  return (
+    <div className="container">
+      <div className="filler" style={{width: `${Stat / 300 * 100}%`}}>
+        <span className="label">{`${Stat}`}</span>
+      </div>
+    </div>
+  )
+}
 
   return (
     <main className="Stats">
@@ -77,11 +98,27 @@ const HPStat = result && result.stats[0].base_stat / 300 * 100;
                 <h2>Stats: </h2>
                 <div>
                   <p>HP:</p>
-                  <div className="container">
-                    <div className="filler" style={{width: `${HPStat}%`}}>
-                      <span className="label">{`${result && result.stats[0].base_stat}`}</span>
-                    </div>
-                  </div>
+                  {Bar(HPStat)}
+                </div>
+                <div>
+                  <p>Attack:</p>
+                  {Bar(ATStat)}
+                </div>
+                <div>
+                  <p>Defense:</p>
+                  {Bar(DEFStat)}
+                </div>
+                <div>
+                  <p>Speed:</p>
+                  {Bar(SPEStat)}
+                </div>
+                <div>
+                  <p>Special Attack:</p>
+                  {Bar(SATStat)}
+                </div>
+                <div>
+                  <p>Special Defense:</p>
+                  {Bar(SDEFStat)}
                 </div>
               </div>
             </div>
