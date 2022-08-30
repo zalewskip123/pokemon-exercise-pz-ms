@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import UlubioneDetails from "./UlubioneDetails";
+import UlubioneSumStats from "./UlubioneSumStats";
 import "./UlubioneList.css";
 
 const PokemonList = (props) => {
-    const [resultU, setResultU] = useState(props.objU);
+    const [resultU, setResultU] = useState(props.objU); // eslint-disable-line
     const [idFPr, setIdFPr] = useState(props.arrID);
-    const [namePokemon, setNamePokemon] = useState(props.arrName);   
+    const [namePokemon, setNamePokemon] = useState(props.arrName);
 
     let content = null;
 
@@ -17,19 +18,24 @@ const PokemonList = (props) => {
 
     if (resultU !== null) {
         content = (
-            <div className="pokemonsGridU">
-                {resultU.result.map(({id, name}) => (
-                    <div className="pokemonsGridItemU" key={id}>
-                        <div className="headerGridItemU">
-                            <p>{id}</p>
-                            <div className="imagesPokemonU">
-                                <img className="imageU1" src={require("../../../images/favourite/115793_star_icon.png")} alt="Favouriteimage"/>
-                                <img className={`imageU2 ${"imageId"+(id)} active`} onClick={() => {FavouritePokeDel(id, name)}} src={require("../../../images/favourite/285661_star_icon.png")} alt="Favouriteimage"/>
+            <div className="contentUlubione">
+                <div className="pokemonsGridU">
+                    {resultU.result.map(({id, name}) => (
+                        <div className="pokemonsGridItemU" key={id}>
+                            <div className="headerGridItemU">
+                                <p>{id}</p>
+                                <div className="imagesPokemonU">
+                                    <img className="imageU1" src={require("../../../images/favourite/115793_star_icon.png")} alt="Favouriteimage"/>
+                                    <img className={`imageU2 ${"imageId"+(id)} active`} onClick={() => {FavouritePokeDel(id, name)}} src={require("../../../images/favourite/285661_star_icon.png")} alt="Favouriteimage"/>
+                                </div>
                             </div>
+                            <UlubioneDetails name={name} id={id}/>
                         </div>
-                        <UlubioneDetails name={name} id={id}/>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <div className="StatsSum">
+                    <UlubioneSumStats resultObject={resultU}/>
+                </div>
             </div>
         )
     }

@@ -2,7 +2,7 @@ import React from "react";
 import UlubioneList from "./UlubioneList";
 import "./Ulubione.css";
 
-function Ulubione({children}) {
+function Ulubione() {
   const AddToJSON = () => {
     if (JSON.parse(localStorage.getItem("idFP")).length !== 0)
     {
