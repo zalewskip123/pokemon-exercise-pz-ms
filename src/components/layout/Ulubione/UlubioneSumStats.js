@@ -50,7 +50,7 @@ const UlubioneSumStats = (props) => {
     
     return (
         <div className="statsSumUDiv">
-            <p className="nameStatsPU">{`Total pokemon stats of ${props.resultObject.result.length} pokemons`}</p>
+            <p className="nameStatsPU">{`Total stats of ${props.resultObject.result.length} ${props.resultObject.result.length === 1 ? "pokemon" : "pokemons"}`}</p>
             <div className="divGridSumStatsU">
                 <div className="gridcollumn">
                     <p>HP: {sumHP}</p>

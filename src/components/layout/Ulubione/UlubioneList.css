@@ -98,6 +98,10 @@
     z-index: 2;
 }
 
+.imgdiv {
+    width: 50%;
+}
+
 .statsU img {
     float: left;
     height: 5vh;
@@ -109,7 +113,7 @@
     padding-top: 0.3vh;
     padding-left: 0.5vw;
     font-size: 3vmin;
-    width: 38%;
+    width: 20%;
     height: 5vh;
 }
 
