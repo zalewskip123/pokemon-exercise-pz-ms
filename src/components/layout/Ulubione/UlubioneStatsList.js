@@ -30,7 +30,7 @@ const UlubioneStaticList = (props) => {
             <div className={`statsU`}>
                 <div className="statsUColumn">
                     <div className="imgdiv"><img src={require('../../../images/favourite/iconsStat/299063_heart_icon.png')} alt="iconStat" /></div><p>{stats[0].base_stat}</p>
-                    <div className="imgdiv"><img src={require('../../../images/favourite/iconsStat/7000046_antique_weapons_swords_war_fight_icon.png')}alt="iconStat" /></div><p>{stats[1].base_stat}</p>
+                    <div className="imgdiv"><img src={require('../../../images/favourite/iconsStat/7000046_antique_weapons_swords_war_fight_icon.png')} alt="iconStat" /></div><p>{stats[1].base_stat}</p>
                     <div className="imgdiv"><img src={require('../../../images/favourite/iconsStat/299070_shield_icon.png')} alt="iconStat" /></div><p>{stats[2].base_stat}</p>
                 </div>
                 <div className="statsUColumn">
