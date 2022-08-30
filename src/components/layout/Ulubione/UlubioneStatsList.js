@@ -26,14 +26,18 @@ const UlubioneStaticList = (props) => {
     }, [URL])
 
     if (stats !== null) {
-        content = (
+        content = ( //icons are from https://www.iconfinder.com/
             <div className={`statsU`}>
-                <p>HP: {stats[0].base_stat}</p>
-                <p>Attack: {stats[1].base_stat}</p>
-                <p>Defense: {stats[2].base_stat}</p>
-                <p>Speed: {stats[5].base_stat}</p>
-                <p>Special attack: {stats[3].base_stat}</p>
-                <p>Special defense: {stats[4].base_stat}</p>
+                <div className="statsUColumn">
+                    <img src={require('../../../images/favourite/iconsStat/299063_heart_icon.png')} alt="iconStat" /><p>{stats[0].base_stat}</p>
+                    <img src={require('../../../images/favourite/iconsStat/7000046_antique_weapons_swords_war_fight_icon.png')}alt="iconStat" /><p>{stats[1].base_stat}</p>
+                    <img src={require('../../../images/favourite/iconsStat/299070_shield_icon.png')} alt="iconStat" /><p>{stats[2].base_stat}</p>
+                </div>
+                <div className="statsUColumn">
+                    <img src={require('../../../images/favourite/iconsStat/3289577_fast_run_running_icon.png')} alt="iconStat" /><p>{stats[5].base_stat}</p>
+                    <img src={require('../../../images/favourite/iconsStat/2995002_flash_light_power_storm_charge_icon.png')} alt="iconStat" /><p>{stats[3].base_stat}</p>
+                    <img src={require('../../../images/favourite/iconsStat/34245_shield_icon.png')} alt="iconStat" /><p>{stats[4].base_stat}</p>
+                </div>
             </div>
         )    
     }
