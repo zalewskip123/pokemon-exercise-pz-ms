@@ -10,6 +10,10 @@ import Ulubione from "./components/layout/Ulubione/Ulubione";
 import Stats from "./components/layout/Stats/Stats";
 
 function App() {
+  window.addEventListener("beforeunload", () => {
+    localStorage.setItem("idFP",null);
+    localStorage.setItem("pokename",null);
+  })
 
   return (
     <BrowserRouter>

@@ -3,6 +3,7 @@ import UlubioneList from "./UlubioneList";
 import "./Ulubione.css";
 
 function Ulubione() {
+  if (JSON.parse(localStorage.getItem("idFP")) === null) window.location="/";
   const AddToJSON = () => {
     if (JSON.parse(localStorage.getItem("idFP")).length !== 0)
     {
