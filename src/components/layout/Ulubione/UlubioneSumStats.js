@@ -34,12 +34,14 @@ const UlubioneSumStats = (props) => {
                 sspecialdf += data.stats[4].base_stat;
                 ssp += data.stats[5].base_stat;
                 if(i === props.resultObject.result.length - 1) {
-                    setSumHP(shp);
-                    setSumAttack(sat);
-                    setSumDefense(sdf);
-                    setSumSpecialAttack(sspecialat);
-                    setSumSpecialDefense(sspecialdf);
-                    setSumSpeed(ssp);
+                    setTimeout(() => {
+                        setSumHP(shp);
+                        setSumAttack(sat);
+                        setSumDefense(sdf);
+                        setSumSpecialAttack(sspecialat);
+                        setSumSpecialDefense(sspecialdf);
+                        setSumSpeed(ssp);
+                    }, 200);
                 }
             })
             .catch(err => {
