@@ -12,31 +12,31 @@ const PokemonList = () => {
 
     const nextButton = () => {
         if(number !== 44) {
-            if (number !== 43) {
-                setURL(next);
-                setNumber(number + 1);
-            }
-            else {
-                setTimeout(() => {
+            setTimeout(() => {
+                if (number !== 43) {
+                    setURL(next);
+                    setNumber(number + 1);
+                }
+                else {
                     setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=18");
                     setNumber(number + 1);
-                }, 800)
-            }
+                }
+            }, 1700)
         }
     };
 
     const prevButton = () => {
         if(prev !== null && prev !== "https://pokeapi.co/api/v2/pokemon/?offset=860&limit=18") {
-            if (number !== 44) {
-                setURL(prev);
-                setNumber(number - 1);
-            }
-            else {
-                setTimeout(() => {
+            setTimeout(() => {
+                if (number !== 44) {
+                    setURL(prev);
+                    setNumber(number - 1);
+                }
+                else {
                     setURL("https://pokeapi.co/api/v2/pokemon/?offset=860&limit=20");
                     setNumber(number - 1);
-                }, 1500)
-            }
+                }
+            }, 1700)
         }
     };
 
