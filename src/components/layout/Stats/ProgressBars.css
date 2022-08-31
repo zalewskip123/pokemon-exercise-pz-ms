@@ -1,5 +1,5 @@
 .container {
-    height: 20;
+    height: 2.5vh;
     width: 60%;
     background-color: #e0e0de;
     border-radius: 50px;
@@ -14,8 +14,14 @@
     text-align: center;
 }
 
+.textc {
+    padding-right: 2.5vw;
+}
+
 .label {
+    position: absolute;
     font-family: "GameBoy";
-    font-size: 2vmin;
+    font-size: 1.8vmin;
+    padding-top: 0.05vh;
     color: white;
 }

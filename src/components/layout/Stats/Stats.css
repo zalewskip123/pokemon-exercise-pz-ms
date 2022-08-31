@@ -41,8 +41,9 @@
     font-family: "GameBoy";
     text-align: center;
     color: white;
-    font-size: 2vmin;
-    width: 12%;
+    font-size: 1.6vmin;
+    height: 1.8vh;
+    width: 8vw;
     border: 2px solid whitesmoke;
     border-radius: 12px;
     margin-left: 44%;

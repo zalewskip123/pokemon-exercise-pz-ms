@@ -93,7 +93,9 @@ const Bar = (Stat) => {
   return (
     <div className="container">
       <div className="filler" style={{width: `${Stat / 300 * 100}%`}}>
-        <span className="label">{`${Stat}`}</span>
+        <div className="textc">
+          <span className="label">{`${Stat}`}</span>
+        </div>
       </div>
     </div>
   )
