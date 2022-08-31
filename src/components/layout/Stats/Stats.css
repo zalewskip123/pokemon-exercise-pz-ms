@@ -58,13 +58,12 @@
 
 .statsdiv img {
     height: 45vh;
-    width: 30%;
 }
 
 .statsdiv h2 {
     font-family: "GameBoy";
     text-align: center;
-    width: 30%;
+    width: auto;
     font-size: 2vmin;
     margin-bottom: 1%;
     margin-top: 1%;
