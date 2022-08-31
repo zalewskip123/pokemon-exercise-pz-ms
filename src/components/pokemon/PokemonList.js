@@ -21,7 +21,7 @@ const PokemonList = () => {
                     setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=18");
                     setNumber(number + 1);
                 }
-            }, 1700)
+            }, 2000)
         }
     };
 
@@ -36,7 +36,7 @@ const PokemonList = () => {
                     setURL("https://pokeapi.co/api/v2/pokemon/?offset=860&limit=20");
                     setNumber(number - 1);
                 }
-            }, 1700)
+            }, 2000)
         }
     };
 
