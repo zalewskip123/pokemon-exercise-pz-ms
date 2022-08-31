@@ -17,7 +17,7 @@ const PokemonList = () => {
                 else setURL("https://pokeapi.co/api/v2/pokemon/?offset=880&limit=18");
                 setNumber(number + 1);
             }
-        }, 1000);
+        }, 800);
     };
 
     const prevButton = () => {
@@ -27,7 +27,7 @@ const PokemonList = () => {
                 else setURL("https://pokeapi.co/api/v2/pokemon/?offset=860&limit=20");
                 setNumber(number - 1);
             }
-        }, 1000);
+        }, 800);
     };
 
     useEffect(() => {
