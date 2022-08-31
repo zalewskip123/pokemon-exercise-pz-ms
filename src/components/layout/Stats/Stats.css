@@ -60,6 +60,16 @@
     height: 45vh;
 }
 
+.center {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 30%;
+    margin-left: 2%;
+}
+
 .statsdiv h2 {
     font-family: "GameBoy";
     text-align: center;
@@ -68,7 +78,7 @@
     margin-bottom: 1%;
     margin-top: 1%;
 }
-.statsdiv p {
+.statsP {
     margin-left: 3%;
     font-family: "GameBoy";
     font-size: 2vmin;
@@ -77,4 +87,12 @@
 
 .stats {
     border-top: 2px solid black;
+}
+
+.flavorText {
+    font-family: "GameBoy";
+    margin-top: 12vh;
+    margin-left: 8%;
+    margin-right: 5%;
+    font-size: 2.5vmin;
 }
