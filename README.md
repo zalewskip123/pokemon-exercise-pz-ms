@@ -5,3 +5,7 @@ Projekt dotyczy pokemonów, gdzie wyświetla się lista po 20 tych pokemonów z 
 ### Link do podglądu projektu
 
 https://astonishing-bunny-7225e4.netlify.app/
+
+### Autorzy
+
+Piotr Zalewski i Mikołaj Studencki
